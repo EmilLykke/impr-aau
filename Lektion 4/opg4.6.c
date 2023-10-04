@@ -18,8 +18,9 @@ int main(void)
     int num1, num2, num1Largest, i;
 
     /*
-    Infinite while loop which makes sure we can use the program
-    multiple times before exiting.
+    "Infinite" while loop which makes sure we can use the program
+    multiple times before exiting. It will be infinite if you
+    don't type in a negative number which breaks the loop
     */
     while (1)
     {
@@ -29,7 +30,7 @@ int main(void)
         // if one of the numbers is negative, exit the program
         if (num1 < 0 || num2 < 0)
         {
-            printf("\nProgrammet er afsluttet");
+            printf("\nProgram has been exited");
             break;
         }
         // if numbers are equal it is the GCD
