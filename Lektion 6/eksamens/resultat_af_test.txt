@@ -1,0 +1,26 @@
+Indskriv operator: +
+Indskriv operand: 5
+Nuvaerende akummulator: 5.000000
+Indskriv operator: -
+Indskriv operand: 6
+Nuvaerende akummulator: -1.000000
+Indskriv operator: *
+Indskriv operand: 3
+Nuvaerende akummulator: -3.000000
+Indskriv operator: #
+Nuvaerende akummulator: -3.000000
+Indskriv operator: %
+Nuvaerende akummulator: 3.000000
+Indskriv operator: #
+Nuvaerende akummulator: 1.732051
+Indskriv operator: ^
+Indskriv operand: 2
+Nuvaerende akummulator: 3.000000
+Indskriv operator: *
+Indskriv operand: 4
+Nuvaerende akummulator: 12.000000
+Indskriv operator: !
+Nuvaerende akummulator: 0.083333
+Indskriv operator: q
+Nuvaerende akummulator: 0.083333
+The final result is: 0.083333
