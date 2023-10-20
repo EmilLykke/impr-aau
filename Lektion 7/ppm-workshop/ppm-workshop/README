@@ -1,0 +1,29 @@
+Når du har pakket filen ud har du følgende:
+
+pixel.h og pixel.c    Du har muligvis allerede programmeret dette i opgave 5.4.
+
+ppm.h og ppm.c        Se på ppm.h, men ignorer indtil videre detaljerne i ppm.c.
+
+prog.c                Et meget simpelt program, som laver et rødt billede. 
+                      Start din programmering her i workshoppen.
+
+
+Oversættelse:
+
+1. Den lette og ligefremme vej:
+
+   gcc -lm pixel.c ppm.c prog.c -o prog
+
+2. Den lidt mere besværlige vej med separat compilering:
+
+   gcc -c pixel.c
+   gcc -c ppm.c
+   gcc -lm prog.c pixel.o ppm.o -o prog
+
+3. Skriv make, og udnyt dermed den makefile som også findes i pakken.
+
+
+Kørsel (på Windows):
+
+   prog.exe
+
