@@ -1,3 +1,14 @@
+/*
+
+Name: Emil Lykke Grann
+Email: egrann23@student.aau.dk
+Education: Software (SW)
+Assignment: Trapezoidal rule
+Description:
+Estimating the area under a graph using the trapezoidal rule
+
+*/
+
 #include <stdio.h>
 #include <math.h>
 #define A1 0
