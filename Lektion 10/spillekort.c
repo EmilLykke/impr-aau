@@ -219,8 +219,6 @@ int sortKort(const void *ip1, const void *ip2)
 
 int rand_comparison(const void *a, const void *b)
 {
-    (void)a;
-    (void)b;
 
     return rand() % 2 ? +1 : -1;
 }
