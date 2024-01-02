@@ -41,8 +41,8 @@ void game(int);
 
 int main(void)
 {
-    // Giving the random function a seed using the time functio
-    srand(time(NULL));
+    // Giving the random function a seed using the time function
+    srand(1337);
     int n = 5;
     // while loop to keep the game running
     while (n >= 5)
@@ -90,7 +90,7 @@ void game(int n)
     // For loop which goes over every round in the game, each round in the Rounds enum
     for (Rounds round = ones; round <= yatzy; round++)
     {
-        // Swtich for cheking the round
+        // Swtich for checking the round
         switch (round)
         {
         case ones:
@@ -298,7 +298,9 @@ int roundPoints(int *diceArr, int n, Rounds round, int val)
 {
     int points = 0;
 
-    // Searies of if statements which does different calcualtions for the different rounds
+    // Series of if statements which does different calcualtions for the different rounds
+    // The main concept for most of the calculations is to start from the largets dice
+    // and then go down if the points is not earned at that spicific dice.
     if (round == onePair)
     {
         for (int dice = 6; dice > 0; dice--)
@@ -360,10 +362,12 @@ int roundPoints(int *diceArr, int n, Rounds round, int val)
             }
             for (k = 0; k < n; k++)
             {
+                // We ensure that the found pair is not the same dice as the first pair
                 if (diceArr[k] == dice && diceArr[k] != diceArr[i])
                 {
                     for (l = 0; l < n; l++)
                     {
+                        // We ensure that the index of the found dice is not the same
                         if (k != l && diceArr[k] == diceArr[l])
                         {
                             pair2 = diceArr[k] * 2;
@@ -421,6 +425,7 @@ int roundPoints(int *diceArr, int n, Rounds round, int val)
             }
             if (size == 4)
             {
+                // break if four similar dies is found
                 points = dice * 4;
                 break;
             }
@@ -496,6 +501,7 @@ int roundPoints(int *diceArr, int n, Rounds round, int val)
         {
             if (twoH > 0)
             {
+                // break if a pair is found
                 break;
             }
             if (diceTwo != diceThree)
@@ -518,6 +524,7 @@ int roundPoints(int *diceArr, int n, Rounds round, int val)
             }
         }
 
+        // we make sure we have a triplet and a pair
         if (threeH > 0 && twoH > 0)
         {
             points = threeH + twoH;
@@ -575,6 +582,7 @@ int roundPoints(int *diceArr, int n, Rounds round, int val)
     else
     {
         // This else is used to calculate the points for the top part of the yatzy game 1-6
+        // it looeks at the value send with the funcion and add it to the points for every match in the dice array
         for (int i = 0; i < n; i++)
         {
             if (points >= val * 5)
